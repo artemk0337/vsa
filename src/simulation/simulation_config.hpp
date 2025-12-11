@@ -1,6 +1,9 @@
 #pragma once
+
 #include <cstddef>
 #include <cstdint>
+#include <map>
+#include <string>
 
 namespace vsa::sim {
 
@@ -23,6 +26,13 @@ struct SimulationConfig
         float child_creation_probability_per_day = 0.0001f;
     };
     Population population;
+
+    struct Resident
+    {
+        float initial_percentage = 0.05f;
+        float become_probability = 0.05f;
+    };
+    std::map<std::string, Resident> residents;
 };
 
 }

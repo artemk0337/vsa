@@ -57,6 +57,9 @@ add_executable(${PROJECT_NAME}
         src/village/village_builder.hpp
         src/village/village_factory.cpp
         src/village/village_factory.hpp
+        src/village/entities_registry.cpp
+        src/village/entities_registry.hpp
+        src/village/entities_registrator.cpp
 )
 
 target_include_directories(${PROJECT_NAME} PRIVATE src/)
